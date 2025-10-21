@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Ejercicio 4 - Abrir nuevas ventanas</h1>
+
+    <button id="print"> Imprime la página</button>
+    <button id="nueva">Abre una nueva ventana</button>
+    <button id="aumenta">Aumenta la ventana</button>
+    <button id="dismin">Disminuye la ventana</button>
+    <button id="tamanyo">Cambia el tamaño</button>
+    <button id="mueve">Mueve la ventana</button>
+    <button id="cierra">Cierra la ventana abierta</button>
+</body>
+<script>
+
+    let pag = null
+    document.getElementById("print").addEventListener('click', () => {
+        window.print()
+    })
+    document.getElementById("nueva").addEventListener('click', () => {
+        pag = window.open("", "", "width=600, height=200")
+        pag.document.write("<p>Ventana creada con open</p>")
+    })
+    document.getElementById("aumenta").addEventListener('click', () => {
+        if (pag !== null) {
+            pag.resizeBy(10, 10)
+        } else {
+            alert("Debes pulsar abrir una ventana")
+        }
+
+    })
+    document.getElementById("dismin").addEventListener('click', () => {
+        if (pag !== null) {
+            pag.resizeBy(-10, -10)
+        } else {
+            alert("Debes pulsar abrir una ventana")
+        }
+
+    })
+    document.getElementById("tamanyo").addEventListener('click', () => {
+        if (pag !== null) {
+            pag.resizeTo(600, 600)
+        } else {
+            alert("Debes pulsar abrir una ventana")
+        }
+
+    })
+    document.getElementById("mueve").addEventListener('click', () => {
+        if (pag !== null) {
+            pag.moveTo(0, 800)
+            pag.focus()
+        } else {
+            alert("Debes pulsar abrir una ventana")
+        }
+
+    })
+    document.getElementById("cierra").addEventListener('click', () => {
+        if (pag !== null) {
+            pag.close()
+        } else {
+            alert("Debes pulsar abrir una ventana")
+        }
+
+    })
+
+
+
+</script>
+
+</html>

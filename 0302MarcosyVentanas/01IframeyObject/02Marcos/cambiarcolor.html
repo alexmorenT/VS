@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Cambiar color</h1>
+    <select name="color" id="color">
+        <option value="green">Verde</option>
+        <option value="cyan">Cyan</option>
+        <option value="pink">Rosa</option>
+        <option value="silver">Plata</option>
+    </select>
+    <select name="site" id="site">
+        <option value="headerframe">Cabecera</option>
+        <option value="panelframe">Principal</option>
+        <option value="footerframe">Pie</option>
+
+    </select>
+    <button id="button" type="submit">Cambiar</button>
+</body>
+<script defer>
+    const btn = document.getElementById("button")
+
+    btn.addEventListener("click", function (event) {
+        const site = document.getElementById("site").value
+        const color = document.getElementById("color").value
+        window.parent.frames[site].document.body.setAttribute("bgcolor", color)
+    })
+</script>
+
+</html>

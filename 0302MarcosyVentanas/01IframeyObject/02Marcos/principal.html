@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 - Contenido principal</title>
+</head>
+
+
+<body>
+    <p id="mensaje"></p>
+</body>
+
+<script>
+    let mensaje = document.getElementById("mensaje")
+    let text = ""
+
+    text += "El número de marcos de la página principal es: " + "<strong>" + parent.frames.length + "</strong>" + "<br>"
+    text += "El número de marcos de la página principal es: " + "<strong>" + window.frames.length + "</strong>" + "<br>"
+    text += "URL de mi padre: " + "<strong>" + parent.document.location + "</strong>" + "<br>"
+    text += "URL de la cabecera: " + "<strong>" + parent.frames[0].document.location + "</strong>" + "<br>"
+    text += "URL del menú: " + "<strong>" + parent.frames[1].document.location + "</strong>" + "<br>"
+    text += "Mi URL es: " + "<strong>" + parent.frames[2].document.location + "</strong>" + "<br>"
+    text += "URL del pie de página: " + "<strong>" + parent.frames[3].document.location + "</strong>" + "<br>"
+    text += "El título de la página principal es: " + "<strong>" + parent.document.title + "</strong>" + "<br>"
+    text += "El título de la cabecera es: " + "<strong>" + parent.frames[0].document.title + "</strong>" + "<br>"
+    text += "Y el título de la página de este frame es: " + "<strong>" + parent.frames[2].document.title + "</strong>" + "<br>"
+    text += "El color del marco del menú es: " + "<strong>" + parent.frames[1].document.body.getAttribute("bgcolor") + "</strong>" + "<br>"
+    mensaje.innerHTML = text
+</script>
+
+</html>
