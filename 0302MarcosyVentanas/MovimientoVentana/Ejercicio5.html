@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1 id="mensaje"></h1>
+
+<body>
+
+</body>
+<script>
+    let pag = window.open("", "", "width=150, height=150")
+
+    function movimiento(i, j, pag) {
+        let mensaje = document.getElementById("mensaje")
+        document.write("i: " + i + " ")
+        document.write("j: " + j + " ")
+        if (i >= 1750 && j >= 2500) {
+            mensaje.innerHTML = "Terminé de moverme"
+            pag.close()
+        } else {
+            pag.moveBy(10, 5)
+            i += 10
+            j += 5
+            setTimeout(function () { movimiento(i, j, pag) }, 15)
+        }
+
+    }
+
+    movimiento(0, 0, pag)
+
+
+
+
+
+
+
+</script>
+
+</html>
