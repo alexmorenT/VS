@@ -16,11 +16,11 @@
 
     function movimiento(i, j, pag) {
         let mensaje = document.getElementById("mensaje")
-        document.write("i: " + i + " ")
-        document.write("j: " + j + " ")
-        if (i >= 1750 && j >= 2500) {
-            mensaje.innerHTML = "Terminé de moverme"
+
+        if (i >= 1800 && j >= 800) {
+            document.write("Terminé de moverme")
             pag.close()
+            return
         } else {
             pag.moveBy(10, 5)
             i += 10
