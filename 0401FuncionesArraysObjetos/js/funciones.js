@@ -30,4 +30,22 @@ function precioIva(precio, iva) {
 
 function diasAnyo(mes, anyo) {
 
+    if (mes > 12 || mes < 1 || anyo < 1 ){
+        return "La fecha " + mes + "/" + anyo + " tiene " + "<strong>" + 0 + "</strong>" + " días"
+    } else {
+        let dia = new Date(anyo, mes, 0).getDate()
+
+        return "La fecha " + mes + "/" + anyo + " tiene " + "<strong>" + dia.toLocaleString() + "</strong>" + " días"
+    }
+}
+
+// Ejercicio 4
+
+function numAleatorio(x, y){
+    
+        x = Number(x)
+        y = Number(y)
+        let random = Math.floor(Math.random() * (y - x + 1)) + x
+
+        return "Número aleatorio entre " + x + " y " + y + ": " + "<strong>" + random + "</strong>"  
 }
