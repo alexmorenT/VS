@@ -30,7 +30,7 @@ function precioIva(precio, iva) {
 
 function diasAnyo(mes, anyo) {
 
-    if (mes > 12 || mes < 1 || anyo < 1 ){
+    if (mes > 12 || mes < 1 || anyo < 1) {
         return "La fecha " + mes + "/" + anyo + " tiene " + "<strong>" + 0 + "</strong>" + " días"
     } else {
         let dia = new Date(anyo, mes, 0).getDate()
@@ -41,11 +41,24 @@ function diasAnyo(mes, anyo) {
 
 // Ejercicio 4
 
-function numAleatorio(x, y){
-    
-        x = Number(x)
-        y = Number(y)
-        let random = Math.floor(Math.random() * (y - x + 1)) + x
+function numAleatorio(x, y) {
 
-        return "Número aleatorio entre " + x + " y " + y + ": " + "<strong>" + random + "</strong>"  
+    x = Number(x)
+    y = Number(y)
+    let random = Math.floor(Math.random() * (y - x + 1)) + x
+
+    return random
+}
+
+// Ejercicio 6 
+
+function palindromo(frase) {
+
+    let fraseTrim = frase.trim().toLowerCase().replace(/\s+/g, '');
+    let arr = fraseTrim.split('');
+    let arrR = [...arr].reverse();
+    let igual = arr.every((valor, i) => valor === arrR[i]);
+
+    return igual;
+
 }

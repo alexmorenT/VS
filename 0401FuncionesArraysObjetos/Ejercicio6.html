@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/funciones.js"></script>
+</head>
+
+<body>
+    <h1>Ejercicio 6 - Palíndromo</h1>
+    <p id="mensaje"></p>
+</body>
+
+<script>
+    let frase = prompt("Ingresa tu frase: ")
+
+    if (palindromo(frase) == true) {
+        document.getElementById("mensaje").innerHTML = `La frase "${frase}" <strong> SÍ </strong> es un palíndromo`
+    } else {
+        document.getElementById("mensaje").innerHTML = `La frase "${frase}" <strong> NO </strong> es un palíndromo`
+    }
+
+</script>
+
+</html>

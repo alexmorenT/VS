@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/funciones.js"></script>
+</head>
+
+
+<body>
+    <h1>Ejercicio 5 - Números aleatorios</h1>
+    <p id="mensaje"></p>
+
+</body>
+
+<script>
+
+    let cant = Number(prompt("Ingrese la cantidad de números que desea: "))
+    let min = Number(prompt("Ingrese el mínimo: "))
+    let max = Number(prompt("Ingrese el máximo: "))
+    let arr = []
+    let txt = ""
+
+
+    function numerosAleatorios() {
+        for (let index = 0; index < cant; index++) {
+            arr.push(numAleatorio(min, max))
+        }
+        return arr
+    }
+
+    arr = numerosAleatorios()
+
+    txt += cant + " números aleatorios entre " + min + " y " + max + "<br>"
+    txt += "<br>"
+
+
+    for (let index = 0; index < arr.length; index++) {
+        txt += arr[index] + "<br>"
+    }
+
+    document.getElementById("mensaje").innerHTML = txt
+
+</script>
+
+</html>
