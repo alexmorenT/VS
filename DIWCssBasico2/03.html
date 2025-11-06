@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        border-style: dashed;
+        border-color: red;
+    }
+
+    #morado {
+        background-color: rgb(173, 7, 173);
+        text-decoration: underline;
+    }
+
+    #pa {
+        background-color: rgb(156, 156, 156);
+        font-size: large;
+        font-family: Arial;
+        border: 5px double grey;
+        border-color: black;
+        color: rgb(16, 100, 168);
+        text-indent: 50px;
+    }
+</style>
+
+<body>
+    <p>Al anidar etiquetas, no se pueden <em>cruzar</em>. Así, se ha empezado por la etiqueta de inicio
+        de párrafo,
+        pero a
+        continuación hay otra etiqueta de inicio para énfasis, por lo que antes de cerrar la etiqueta de párrafo
+        hay que cerrar la etiqueta de énfasis.
+    </p>
+    <p id="pa">Los párrafos creados con HTML son elementos de <span id="morado">bloque</span>, por lo que siempre ocupan
+        toda la
+        anchura de la
+        ventana del navegador.
+    </p>
+    <p>Strong es una etiqueta en <span id="morado">línea</span>.
+    </p>
+    <p>Al anidar etiquetas, no se pueden <em>cruzar</em>. Así, se ha empezado por la etiqueta de inicio
+        de párrafo,
+        pero a
+        continuación hay otra etiqueta de inicio para énfasis, por lo que antes de cerrar la etiqueta de párrafo
+        hay que cerrar la etiqueta de énfasis.</p>
+    <p>Los párrafos creados con HTML son elementos de <span id="morado">bloque</span>, por lo que siempre ocupan toda la
+        anchura de la
+        ventana del navegador.</p>
+    <p>Strong es una etiqueta en <span id="morado">línea</span>.
+    </p>
+</body>
+
+</html>
