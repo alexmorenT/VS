@@ -18,9 +18,7 @@ let Cuenta = {
     infoSaldo: function () { return "Su saldo actual es de: " + this.saldo + " €" }
 }
 
-document.getElementById("nombre").textContent = "Titular de la cuenta: " + Cuenta.nombreTitular()
 
-document.getElementById("saldo").textContent = Cuenta.infoSaldo()
 
 function ingresarDinero(Cuenta) {
     let cantidad = parseFloat(prompt("Ingresa la cantidad que quieres ingresar: "))
@@ -51,7 +49,7 @@ function Concesionario(nombre, direccion, ciudad, telefono, responsable) {
     this.responsable = responsable;
 
     this.mostrarDatos = function () {
-        return ` <tr>
+        return `<tr>
         <td>${this.codigo}</td>
         <td>${this.nombre}</td>
         <td>${this.direccion}</td>
@@ -66,37 +64,36 @@ function Concesionario(nombre, direccion, ciudad, telefono, responsable) {
 function Coches(marca, modelo, anyo, concesionario) {
     this.marca = marca;
     this.modelo = modelo;
-    this.direccion = direccion;
     this.anyo = anyo;
     this.concesionario = concesionario;
 
     this.mostrarDatos = function () {
-        return ` <tr>
+        return `<tr>
         <td>${this.marca}</td>
         <td>${this.modelo}</td>
-        <td>${this.direccion}</td>
         <td>${this.anyo}</td>
-        <td>${this.Concesionario.nombre}</td>
+        <td>${this.concesionario.nombre}</td>
         </tr>`
 
     }
 }
 
 const conce = []
-let con1 = new Concesionario("TercerMundo", "C/Salsipuedes 123", "Venezuela", "9155555", "Miguelito")
+let con1 = new Concesionario("Alcalá", "C/Salsipuedes 123", "Madrid", "9155555", "Miguelito")
 let con2 = new Concesionario("Majadahonda", "C/Pereza 19", "Majadahonda", "", "")
 conce.push(con1)
 conce.push(con2)
 
 const coches = []
 let c1 = new Coches("Seat", "Toledo", "1999", con1) 
-let c2 = new Coches("Ferrari", "Sadmasomd", "2010", con2)
+let c2 = new Coches("Ferrari", "Paganni", "2010", con2)
 let c3 = new Coches("BMW", "Z4", "2010", con1)
 coches.push(c1)
 coches.push(c2)
 coches.push(c3)
 
-let tablaConcesionario = `<table border="1">
+ let tablaConcesionario = `<h2>Concesionarios</h2>
+            <table border="1" cellpadding="5">
         <tr>
             <th>Código</th>
             <th>Nombre</th>
@@ -106,10 +103,93 @@ let tablaConcesionario = `<table border="1">
             <th>Responsable</th>
         </tr>`;
 
-// for (let index = 0; index < conce.length; index++) {
-//     tablaConcesionario += conce[index].mostrarDatos();
-// }
+ for (let index = 0; index < conce.length; index++) {
+    tablaConcesionario += conce[index].mostrarDatos();
+}
+
+
+
 tablaConcesionario += " </table>";
-tablaConcesionario += " Hola";
+
+ let tablaCoches = `<h2>Coches</h2>
+            <table border="1" cellpadding="5">
+        <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Año</th>
+            <th>Concesionario</th>
+        </tr>`;
+ for (let index = 0; index < coches.length; index++) {
+    tablaCoches += coches[index].mostrarDatos();
+}
+
+tablaCoches += " </table>";
+
+
+// Ejercicio 3
+
+const alumnos = [
+    {
+        nombre: "José",
+        edad: 20,
+        nota: 2
+    },
+    {
+        nombre: "Alex",
+        edad: 24,
+        nota: 5
+    },
+    {
+        nombre: "Victor",
+        edad: 20,
+        nota: 7.2
+    },
+    {
+        nombre: "Fernando",
+        edad: 27,
+        nota: 10
+    },
+    {
+        nombre: "Laura",
+        edad: 25,
+        nota: 10
+    },
+    {
+        nombre: "Elia",
+        edad: 20,
+        nota: 3.5
+    }
+]
+
+let aprobados = ""
+
+for (let index = 0; index < alumnos.length; index++) {
+    if (alumnos[index].nota >= 5){
+        if(aprobados !== ""){
+            aprobados += ", "
+        }
+        aprobados += alumnos[index].nombre
+    }
+}
+
+let nombres = ""
+
+for (let index = 0; index < alumnos.length; index++) {
+    if(nombres !== ""){
+            nombres += ", "
+        }
+        nombres += alumnos[index].nombre
+}
+
+let media = 0
+
+for (let index = 0; index < alumnos.length; index++) {
+        media += alumnos[index].nota
+}
+     media = media / alumnos.length 
+
+      
+
+
 
 

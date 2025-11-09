@@ -5,21 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="js/objetos.js" defer></script>
+    <script src="js/objetos.js"></script>
 </head>
 
 <body>
     <h1>Ejercicio 10 - Concesionario</h1>
     <div id="coches"></div>
 
-    <div id="concesionario">
-        <h1>concesionario</h1>
-    </div>
+    <div id="concesionario"></div>
 </body>
-
 <script>
+    
+document.getElementById("concesionario").innerHTML += tablaConcesionario;
 
-    document.getElementById("concesionario").innerHTML = tablaConcesionario;
+document.getElementById("coches").innerHTML += tablaCoches;
+
 </script>
-
 </html>
