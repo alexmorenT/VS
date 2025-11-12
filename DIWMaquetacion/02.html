@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-size: 0;
+    }
+
+    .container {
+        border: 1px solid black;
+        width: 100%;
+        height: 200px;
+
+    }
+
+    .container div div {
+        height: 200px;
+    }
+
+    .fila1 div {
+        display: inline-block;
+        width: 33.33%;
+        height: 200px;
+    }
+
+    .fila1>div:nth-of-type(1) {
+        background-color: blue;
+    }
+
+    .fila1>div:nth-of-type(2) {
+        background-color: green;
+    }
+
+    .fila1>div:nth-of-type(3) {
+        background-color: red;
+    }
+
+    .fila2 div {
+        display: inline-block;
+        width: 100%;
+        background-color: black;
+        height: 200px;
+    }
+
+    .fila3 div {
+        display: inline-block;
+        width: 50%;
+    }
+
+    .fila3>div:nth-of-type(1) {
+        background-color: pink;
+    }
+
+    .fila3>div:nth-of-type(2) {
+        background-color: orange;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="fila1">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="fila2">
+            <div></div>
+        </div>
+        <div class="fila3">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+
+</html>

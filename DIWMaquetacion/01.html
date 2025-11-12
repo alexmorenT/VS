@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>La propiedad display</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    img {
+        width: 50px;
+    }
+
+    span#mg {
+        background-color: green;
+        margin: 20px;
+        padding: 10px;
+    }
+
+    p {
+        border: 1px solid black;
+        background-color: red;
+        height: 110px;
+    }
+
+    div.inline {
+        border: 1px solid black;
+    }
+
+    div.inline p {
+        background-color: yellow;
+        display: inline-block;
+        height: 200px;
+        width: 100px;
+    }
+
+    body>p:nth-of-type(2) {
+        background-color: blue;
+        width: 70%;
+    }
+
+    body>p:nth-of-type(3) {
+        background-color: white;
+    }
+
+    .table {
+        display: table;
+        border: 1px solid black;
+    }
+
+    .row {
+        display: table-row;
+    }
+
+    .cell {
+        display: table-cell;
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+    <!-- ELEMENTOS EN LÍNEA -->
+    <!-- Cuatro elementos en lines.img y texto -->
+    <img src="img/logo.png" /><b>HOLA</b><span>ADIOS</span><img src="img/logo.png" />
+    <!-- El span solo coge los márgenes derecho e izquierdo. No por arriba y abajo.-->
+    <p>
+        Diseño de interfaces web
+        Lorem ipsum dolor sit <span id="mg">amet</span> consectetur adipisicing elit. Mollitia qui eum aut
+        impedit
+        earum totam architecto recusandae labore exercitationem voluptates dolore, omnis, harum, ullam explicabo
+        fuga.
+        Voluptate est voluptatem recusandae!
+    </p>
+    <!-- ELEMENTOS INLINE-BLOCK-->
+    <div class="inline">
+        Algo de Texto Anterior
+        <p>ELEMENTO INLINE-BLOCK</p>
+        <p>ELEMENTO INLINE-BLOCK</p>
+        Algo de Texto Posterior
+    </div>
+    <!-- ELEMENTOS EN BLOQUE -->
+    <p></p>
+    <p></p>
+    <!--DISPLAY SIMILAR A TABLAS-->
+    <div class="table">
+        <div class="row">
+            <div class="cell">
+                HOLA
+            </div>
+            <div class="cell">
+                <img src="img/logo.png" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolore eveniet fugiat aspernatur
+                exercitationem? Beatae architecto expedita ea maiores aliquid neque! Atque, consectetur! Harum vel
+                vero
+                soluta? Corrupti, voluptates dicta.
+            </div>
+            <div class="cell">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolore eveniet fugiat aspernatur
+                Diseño de interfaces web
+                exercitationem? Beatae architecto expedita ea maiores aliquid neque! Atque, consectetur! Harum vel
+                vero
+                soluta? Corrupti, voluptates dicta.
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
