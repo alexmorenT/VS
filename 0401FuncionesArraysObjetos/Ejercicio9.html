@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="js/objetos.js" defer></script>
+    <script src="js/objetos.js"></script>
 </head>
 
 <body>
@@ -20,5 +20,11 @@
  
 
 </body>
+
+<script>
+    document.getElementById("nombre").textContent += "Titular de la cuenta: " + Cuenta.nombreTitular()
+
+    document.getElementById("saldo").textContent += Cuenta.infoSaldo()
+</script>
 
 </html>
