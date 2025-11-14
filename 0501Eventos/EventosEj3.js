@@ -28,6 +28,6 @@ function keypress(e){
 function muestraMensaje(e){
 document.getElementById("mensaje").textContent = text;
 }
-})
+});
 
 
